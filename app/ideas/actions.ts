@@ -1,17 +1,19 @@
 "use server";
 
-import { mkdir, writeFile } from "node:fs/promises";
-import path from "node:path";
 import {
   slugify,
   validateDraft,
   type ArtifactDraft,
   type ValidationResult
 } from "@/lib/artifact-contract";
+import { storeDraft, type DraftStorage } from "@/lib/draft-store";
 
 export type SaveDraftResult = {
   ok: boolean;
+  slug?: string;
   path?: string;
+  url?: string;
+  storage?: DraftStorage;
   validation: ValidationResult;
   error?: string;
 };
@@ -25,12 +27,15 @@ export async function saveDraft(
   const slug = baseSlug || `draft-${Date.now()}`;
 
   try {
-    const dir = path.join(process.cwd(), "content", "artifact-drafts");
-    await mkdir(dir, { recursive: true });
-    const filePath = path.join(dir, `${slug}.json`);
-    const relPath = `content/artifact-drafts/${slug}.json`;
-    await writeFile(filePath, JSON.stringify(draft, null, 2) + "\n", "utf8");
-    return { ok: true, path: relPath, validation };
+    const stored = await storeDraft(slug, draft);
+    return {
+      ok: true,
+      slug: stored.slug,
+      path: stored.path,
+      url: stored.url,
+      storage: stored.storage,
+      validation
+    };
   } catch (err) {
     return {
       ok: false,

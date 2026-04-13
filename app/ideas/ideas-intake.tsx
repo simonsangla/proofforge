@@ -187,17 +187,31 @@ export function IdeasIntake() {
               : `Save draft (${issuesCount} ${issuesCount === 1 ? "issue" : "issues"})`}
         </button>
         {saveResult ? (
-          <div
-            className={`rounded-sm border p-3 text-sm ${
-              saveResult.ok
-                ? "border-line bg-[#fbf8f3] text-ink"
-                : "border-line bg-[#fbf8f3] text-ink"
-            }`}
-          >
+          <div className="rounded-sm border border-line bg-[#fbf8f3] p-3 text-sm text-ink">
             {saveResult.ok ? (
-              <>
-                Saved to <code className="text-muted">{saveResult.path}</code>
-              </>
+              <div className="flex flex-col gap-1">
+                <div>
+                  <span className="text-xs uppercase tracking-[0.2em] text-muted">
+                    Saved
+                  </span>
+                  <span className="ml-2 text-xs uppercase tracking-[0.2em] text-muted">
+                    {saveResult.storage === "blob"
+                      ? "vercel blob"
+                      : "local filesystem"}
+                  </span>
+                </div>
+                <code className="break-all text-muted">{saveResult.path}</code>
+                {saveResult.url ? (
+                  <a
+                    href={saveResult.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="break-all underline"
+                  >
+                    {saveResult.url}
+                  </a>
+                ) : null}
+              </div>
             ) : (
               <>Failed: {saveResult.error ?? "unknown error"}</>
             )}
