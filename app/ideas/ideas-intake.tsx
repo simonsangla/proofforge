@@ -11,6 +11,7 @@ import {
   type ArtifactField
 } from "@/lib/artifact-contract";
 import { parseIdea } from "@/lib/parse-idea";
+import { IDEAS_INTAKE_PROMPT } from "@/lib/ideas-intake-prompt";
 import { saveDraft, type SaveDraftResult } from "./actions";
 
 const PLACEHOLDER = `Rough idea — type or paste.
@@ -42,6 +43,17 @@ export function IdeasIntake() {
   const [text, setText] = useState("");
   const [saveResult, setSaveResult] = useState<SaveDraftResult | null>(null);
   const [isSaving, startSave] = useTransition();
+  const [promptCopied, setPromptCopied] = useState(false);
+
+  async function onCopyPrompt() {
+    try {
+      await navigator.clipboard.writeText(IDEAS_INTAKE_PROMPT);
+      setPromptCopied(true);
+      setTimeout(() => setPromptCopied(false), 1500);
+    } catch {
+      // Clipboard API may be blocked (e.g. non-HTTPS). User can still tap-select the <pre>.
+    }
+  }
 
   const parsed = useMemo(() => parseIdea(text), [text]);
   const validation = useMemo(() => validateDraft(parsed.draft), [parsed.draft]);
@@ -87,6 +99,31 @@ export function IdeasIntake() {
           inputMode="text"
           className="w-full resize-y rounded-sm border border-line bg-[#fbf8f3] p-4 text-base leading-relaxed text-ink placeholder:text-muted/70 focus:outline-none focus:ring-1 focus:ring-ink/20"
         />
+      </section>
+
+      <section>
+        <details className="rounded-sm border border-line bg-[#fbf8f3] p-4 text-sm">
+          <summary className="cursor-pointer list-none text-xs uppercase tracking-[0.3em] text-muted marker:hidden">
+            Use Claude to draft this
+          </summary>
+          <div className="mt-3 flex flex-col gap-3">
+            <p className="text-sm text-muted">
+              Copy this prompt, open Claude on iPhone, describe the idea in chat.
+              Claude keeps memory of the idea across turns and hands you back a
+              paste-ready block for the textarea above.
+            </p>
+            <button
+              type="button"
+              onClick={onCopyPrompt}
+              className="self-start rounded-sm border border-ink px-3 py-2 text-xs uppercase tracking-[0.2em] transition hover:bg-ink hover:text-paper"
+            >
+              {promptCopied ? "Copied" : "Copy prompt"}
+            </button>
+            <pre className="max-h-96 overflow-y-auto whitespace-pre-wrap rounded-sm border border-line bg-paper p-3 text-xs leading-relaxed text-ink">
+              {IDEAS_INTAKE_PROMPT}
+            </pre>
+          </div>
+        </details>
       </section>
 
       <section className="flex flex-col gap-3">
