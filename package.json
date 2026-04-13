@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ci:local": "node scripts/ci-local.mjs",
+    "browser:validate": "pnpm exec playwright test scripts/browser-validate.spec.mjs",
+    "dev:validate": "node scripts/dev-control.mjs dev:validate",
+    "preview:human": "node scripts/dev-control.mjs preview:human",
+    "responsive:validate": "node scripts/responsive-validate.mjs",
+    "prod:smoke": "node scripts/prod-smoke.mjs"
   },
   "dependencies": {
     "next": "^14.2.30",

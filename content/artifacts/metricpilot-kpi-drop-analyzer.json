@@ -1,0 +1,16 @@
+{
+  "name": "MetricPilot — KPI Drop Analyzer",
+  "category": "Data Tool",
+  "promise": "Turns a KPI dip into a fast read on likely drivers, so a team can inspect the right segment before the next meeting.",
+  "business_value": "Shows a commercially useful analytics workflow for founders, operators, and consultants who need faster root-cause triage on revenue or activation drops.",
+  "status": "concept",
+  "protection_level": "public",
+  "link": "/lab/metricpilot-kpi-drop-analyzer",
+  "capture": "/captures/metricpilot-kpi-drop-analyzer.svg",
+  "tech_stack": [
+    "Next.js",
+    "Content Design",
+    "Analytics UI"
+  ],
+  "date": "2026-04-13"
+}

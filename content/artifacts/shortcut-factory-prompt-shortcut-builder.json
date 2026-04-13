@@ -1,0 +1,16 @@
+{
+  "name": "Shortcut Factory — Prompt Shortcut Builder",
+  "category": "Prompt Forge",
+  "promise": "Turns a messy prompt backlog into three reusable shortcuts with consistent naming, clear inputs, and concrete outputs.",
+  "business_value": "Shows a compact prompt product that teams can demo, sell, or reuse inside client delivery and internal operations.",
+  "status": "live_demo",
+  "protection_level": "limited",
+  "link": "/lab/shortcut-factory-prompt-shortcut-builder",
+  "capture": "/captures/shortcut-factory-prompt-shortcut-builder.svg",
+  "tech_stack": [
+    "Static HTML",
+    "Prompt Engineering",
+    "Content Design"
+  ],
+  "date": "2026-04-13"
+}

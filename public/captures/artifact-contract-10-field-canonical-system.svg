@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Artifact Contract — 10-Field Canonical System</title>
+  <desc id="desc">Structured visual for the canonical 10-field artifact contract.</desc>
+  <rect width="1200" height="800" fill="#f4efe8"/>
+  <rect x="72" y="72" width="1056" height="656" rx="28" fill="#fffaf3" stroke="#d9cdbb"/>
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700" fill="#1f1a12">Artifact Contract</text>
+  <text x="120" y="200" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#5f5648">10-field canonical system</text>
+  <text x="120" y="266" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Defines one exact schema for public proof units.</text>
+  <text x="120" y="298" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Keeps names, promise, value, status, and proof readable.</text>
+  <g transform="translate(120 360)">
+    <rect width="276" height="190" rx="20" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">Contract</text>
+    <text x="22" y="80" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f1a12">10 fields</text>
+    <text x="22" y="120" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Consistent. Compact.</text>
+    <text x="22" y="150" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Reviewable.</text>
+  </g>
+  <g transform="translate(420 360)">
+    <rect width="276" height="190" rx="20" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">Public proof</text>
+    <text x="22" y="80" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f1a12">Public</text>
+    <text x="22" y="120" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Readable to visitors.</text>
+    <text x="22" y="150" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">No private logic.</text>
+  </g>
+  <g transform="translate(720 360)">
+    <rect width="276" height="190" rx="20" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">Use case</text>
+    <text x="22" y="80" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f1a12">Publishing</text>
+    <text x="22" y="120" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Scan fast.</text>
+    <text x="22" y="150" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Ship clean.</text>
+  </g>
+</svg>

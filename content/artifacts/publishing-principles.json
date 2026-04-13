@@ -1,0 +1,15 @@
+{
+  "name": "Publishing Principles",
+  "category": "Playbook",
+  "promise": "Turns a short principle note into a public proof unit with a clear publishing rule.",
+  "business_value": "Shows how the public repo can turn internal guidance into a reusable, shippable artifact.",
+  "status": "concept",
+  "protection_level": "public",
+  "link": "/lab/publishing-principles",
+  "capture": "/captures/publishing-principles.svg",
+  "tech_stack": [
+    "Content Design",
+    "PWA"
+  ],
+  "date": "2026-04-13"
+}
