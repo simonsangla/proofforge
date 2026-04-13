@@ -8,6 +8,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <Link href="/" className="font-medium tracking-wide">ProofForge</Link>
           <nav className="flex gap-4 text-muted">
             <Link href="/lab">Lab</Link>
+            <Link href="/ideas">Ideas</Link>
             <Link href="/notes">Notes</Link>
             <Link href="/about">About</Link>
           </nav>
