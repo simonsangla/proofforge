@@ -36,6 +36,7 @@ function sanitizedEnv(extra = {}) {
   for (const key of Object.keys(env)) {
     if (key.toLowerCase().startsWith("npm_config_")) delete env[key];
   }
+  env.NEXT_TELEMETRY_DISABLED = "1";
   delete env.NO_COLOR;
   delete env.FORCE_COLOR;
   return env;
