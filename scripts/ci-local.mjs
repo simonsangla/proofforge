@@ -5,71 +5,54 @@ import { resolve } from "node:path";
 
 const logDir = ".artifacts/logs";
 const logPath = resolve(logDir, "ci-local.log");
-const defaultColimaSocket = `unix://${process.env.HOME}/.colima/default/docker.sock`;
+const batchTargetSlugs = process.env.BATCH_TARGET_SLUGS || process.env.BATCH_TARGET_SLUG || "local-first-ai-executor-loop";
 
-function runUtf8(command, args) {
-  try {
-    return execFileSync(command, args, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }).trim();
-  } catch {
-    return "";
-  }
-}
-
-function detectDockerHost() {
-  const contextHost = runUtf8("docker", ["context", "inspect", "colima", "--format", "{{.Endpoints.docker.Host}}"]);
-  if (contextHost) return contextHost;
-  return process.env.DOCKER_HOST || defaultColimaSocket;
-}
-
-const actArgs = [
-  "pull_request",
-  "-j",
-  "validate",
-  "-W",
-  ".github/workflows/ci.yml",
-  "--container-architecture",
-  "linux/arm64",
-  "--container-daemon-socket",
-  "unix:///var/run/docker.sock",
-  "-P",
-  "ubuntu-latest=ghcr.io/catthehacker/ubuntu:act-22.04"
-];
-
-try {
-  execFileSync("act", ["--version"], { stdio: "pipe" });
-} catch (error) {
-  mkdirSync(logDir, { recursive: true });
-  writeFileSync(
-    logPath,
-    [
-      "act=missing",
-      "blocker=install act to run local GitHub Actions emulation",
-      "expected=act --version"
-    ].join("\n") + "\n"
-  );
-  console.error("act not installed. Install act to run local GitHub Actions emulation.");
-  process.exit(1);
+function run(command, args, extraEnv = {}) {
+  execFileSync(command, args, {
+    encoding: "utf8",
+    stdio: "inherit",
+    env: {
+      ...process.env,
+      ...extraEnv,
+      BATCH_TARGET_SLUGS: batchTargetSlugs
+    }
+  });
 }
 
 mkdirSync(logDir, { recursive: true });
-const dockerHost = detectDockerHost();
-const colimaStatus = runUtf8("colima", ["status"]);
-const dockerContext = runUtf8("docker", ["context", "show"]);
-writeFileSync(
-  logPath,
-  [
-    "act=present",
-    "workflow=.github/workflows/ci.yml",
-    `colima_running=${colimaStatus ? "yes" : "no"}`,
-    `docker_context=${dockerContext || "unknown"}`,
-    `docker_host=${dockerHost}`,
-    "socket_path=/var/run/docker.sock"
-  ].join("\n") + "\n"
-);
-execFileSync("act", actArgs, {
-  stdio: "inherit",
-  env: {
-    ...process.env,
-    DOCKER_HOST: dockerHost
-  }
-});
+
+try {
+  run("pnpm", ["lint"]);
+  run("pnpm", ["build"]);
+  run("pnpm", ["dev:validate"], {
+    PORT: "3200",
+    TARGET_PORT: "3200"
+  });
+  run("pnpm", ["responsive:validate"], {
+    PORT: "3201",
+    TARGET_PORT: "3201",
+    RESPONSIVE_PORT: "3201"
+  });
+  writeFileSync(
+    logPath,
+    [
+      "mode=host-sequence",
+      `batch_target_slugs=${batchTargetSlugs}`,
+      "lint=ok",
+      "build=ok",
+      "dev_validate=ok",
+      "responsive_validate=ok",
+      "status=ok"
+    ].join("\n") + "\n"
+  );
+} catch (error) {
+  writeFileSync(
+    logPath,
+    [
+      "mode=host-sequence",
+      `batch_target_slugs=${batchTargetSlugs}`,
+      "status=fail"
+    ].join("\n") + "\n"
+  );
+  throw error;
+}

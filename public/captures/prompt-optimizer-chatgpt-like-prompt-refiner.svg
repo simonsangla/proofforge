@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt Optimizer ChatGPT-like Prompt Refiner</title>
+  <desc id="desc">Structured visual showing a prompt refiner, commercial value, and public versus private boundary.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3efe7"/>
+      <stop offset="100%" stop-color="#ede5d8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fbf7f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1f1a12" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title { font: 700 56px/1.1 Inter, Arial, sans-serif; fill: #1f1a12; }
+      .subtitle { font: 500 22px/1.4 Inter, Arial, sans-serif; fill: #5f5648; }
+      .label { font: 700 16px/1.2 Inter, Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; fill: #7f7363; }
+      .meta { font: 600 19px/1.4 Inter, Arial, sans-serif; fill: #352d22; }
+      .body { font: 400 18px/1.6 Inter, Arial, sans-serif; fill: #4f4639; }
+      .card-title { font: 700 24px/1.2 Inter, Arial, sans-serif; fill: #1f1a12; }
+      .card-kicker { font: 700 14px/1.2 Inter, Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; fill: #8b7d69; }
+      .card-body { font: 400 17px/1.55 Inter, Arial, sans-serif; fill: #4f4639; }
+      .chip { font: 700 14px/1.2 Inter, Arial, sans-serif; fill: #352d22; }
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="76" y="76" width="1448" height="848" rx="34" fill="url(#panel)" stroke="#d8cbb6"/>
+  </g>
+
+  <g transform="translate(120 132)">
+    <text class="label" x="0" y="0">Prompt Tool</text>
+    <text class="title" x="0" y="66">Prompt Optimizer</text>
+    <text class="subtitle" x="0" y="112">ChatGPT-like Prompt Refiner</text>
+    <text class="body" x="0" y="158">Refines messy prompts into tighter, testable prompts with clearer intent, constraints, and output shape.</text>
+  </g>
+
+  <g transform="translate(120 320)">
+    <rect x="0" y="0" width="420" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Business value</text>
+    <text class="meta" x="28" y="78">Faster prompt quality</text>
+    <text class="body" x="28" y="114">Operators, consultants, and teams can tighten prompts without restarting from zero.</text>
+    <text class="body" x="28" y="146">Less rework. Better constraints. Easier reuse.</text>
+  </g>
+
+  <g transform="translate(576 320)">
+    <rect x="0" y="0" width="420" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Status</text>
+    <text class="meta" x="28" y="78">live_demo</text>
+    <text class="label" x="28" y="118">Protection level</text>
+    <text class="meta" x="28" y="156">limited</text>
+    <text class="body" x="220" y="78">Frontend live.</text>
+    <text class="body" x="220" y="112">Backend gated.</text>
+    <text class="body" x="220" y="146">Secrets stay private.</text>
+  </g>
+
+  <g transform="translate(1032 320)">
+    <rect x="0" y="0" width="392" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Tech stack</text>
+    <text class="body" x="28" y="82">React PWA</text>
+    <text class="body" x="28" y="118">Firebase</text>
+    <text class="body" x="28" y="154">Prompt Engineering</text>
+  </g>
+
+  <g transform="translate(120 560)">
+    <text class="label" x="0" y="0">Source proof</text>
+    <text class="meta" x="0" y="38">Real frontend demo attempted at prompt-optimizer-prod.web.app</text>
+  </g>
+
+  <g transform="translate(120 610)">
+    <g>
+      <rect x="0" y="0" width="436" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">Refine</text>
+      <text class="card-title" x="28" y="76">Prompt rewrite</text>
+      <text class="card-body" x="28" y="116">Tighten intent, constraints, and output shape.</text>
+      <text class="card-body" x="28" y="148">Useful when a prompt is broad or messy.</text>
+      <text class="card-body" x="28" y="180">Commercial value: less rework.</text>
+    </g>
+    <g transform="translate(482 0)">
+      <rect x="0" y="0" width="436" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">Compare</text>
+      <text class="card-title" x="28" y="76">Alternatives</text>
+      <text class="card-body" x="28" y="116">Show tighter variants and rank by usefulness.</text>
+      <text class="card-body" x="28" y="148">Good for prompt review and decision-making.</text>
+      <text class="card-body" x="28" y="180">Commercial value: faster operator choice.</text>
+    </g>
+    <g transform="translate(964 0)">
+      <rect x="0" y="0" width="436" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">Reuse</text>
+      <text class="card-title" x="28" y="76">History</text>
+      <text class="card-body" x="28" y="116">Track previous optimizations and selections.</text>
+      <text class="card-body" x="28" y="148">Keeps prompt work reusable instead of ad hoc.</text>
+      <text class="card-body" x="28" y="180">Commercial value: repeatable delivery asset.</text>
+    </g>
+  </g>
+
+  <g transform="translate(120 900)">
+    <rect x="0" y="-34" width="420" height="42" rx="21" fill="#1f1a12"/>
+    <text class="chip" x="22" y="-6" fill="#f8f3ea">Public proof only. Private backend stays out.</text>
+  </g>
+</svg>

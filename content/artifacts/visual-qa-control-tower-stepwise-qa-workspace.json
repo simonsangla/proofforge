@@ -1,0 +1,16 @@
+{
+  "name": "Visual QA Control Tower — Stepwise QA Workspace",
+  "category": "QA Workspace",
+  "promise": "Gives operators one stepwise surface for canonical demos, typed questions, source QA, component QA, and journey QA.",
+  "business_value": "Turns harness verification into a reviewable commercial proof that reduces drift and speeds operator sign-off.",
+  "status": "live_demo",
+  "protection_level": "limited",
+  "link": "/lab/visual-qa-control-tower-stepwise-qa-workspace",
+  "capture": "/captures/visual-qa-control-tower-stepwise-qa-workspace.svg",
+  "tech_stack": [
+    "Operator Harness",
+    "QA Workflow",
+    "Content Design"
+  ],
+  "date": "2026-04-13"
+}

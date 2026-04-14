@@ -6,20 +6,30 @@ import process from "node:process";
 
 const port = Number(process.env.RESPONSIVE_PORT || 3100);
 const baseURL = `http://localhost:${port}`;
-const batchTargetSlug = process.env.BATCH_TARGET_SLUG || "local-first-ai-executor-loop";
+function getBatchTargetSlugs() {
+  const raw = process.env.BATCH_TARGET_SLUGS || process.env.BATCH_TARGET_SLUG || "local-first-ai-executor-loop";
+  return raw
+    .split(",")
+    .map((slug) => slug.trim())
+    .filter(Boolean);
+}
+
 const viewports = [
   { label: "390x844", width: 390, height: 844 },
   { label: "768x1024", width: 768, height: 1024 },
   { label: "1280x800", width: 1280, height: 800 },
   { label: "1440x900", width: 1440, height: 900 }
 ];
-const pages = [
-  "/",
-  "/lab",
-  "/lab/metricpilot-kpi-drop-analyzer",
-  `/lab/${batchTargetSlug}`,
-  "/lab/publishing-principles"
-];
+const pages = Array.from(
+  new Set([
+    "/",
+    "/lab",
+    "/lab/metricpilot-kpi-drop-analyzer",
+    "/lab/local-first-ai-executor-loop",
+    "/lab/publishing-principles",
+    ...getBatchTargetSlugs().map((slug) => `/lab/${slug}`)
+  ])
+);
 const artifactRoot = ".artifacts/validation/responsive";
 const logRoot = ".artifacts/logs";
 

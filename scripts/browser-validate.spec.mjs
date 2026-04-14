@@ -3,19 +3,31 @@ import { mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 
 const baseURL = process.env.PREVIEW_URL || `http://localhost:${process.env.TARGET_PORT || 3000}`;
-const batchTargetSlug = process.env.BATCH_TARGET_SLUG || "local-first-ai-executor-loop";
+function getBatchTargetSlugs() {
+  const raw = process.env.BATCH_TARGET_SLUGS || process.env.BATCH_TARGET_SLUG || "local-first-ai-executor-loop";
+  return raw
+    .split(",")
+    .map((slug) => slug.trim())
+    .filter(Boolean);
+}
+
 const artifactRoot = process.env.VALIDATION_ARTIFACT_ROOT || ".artifacts/validation/browser";
-const pages = process.env.VALIDATION_PAGES
-  ? process.env.VALIDATION_PAGES.split(",")
-  : [
-      "/",
-      "/lab",
-      "/lab/metricpilot-kpi-drop-analyzer",
-      `/lab/${batchTargetSlug}`,
-      "/lab/publishing-principles"
-    ];
+const pages = Array.from(
+  new Set(
+    process.env.VALIDATION_PAGES
+      ? process.env.VALIDATION_PAGES.split(",")
+      : [
+          "/",
+          "/lab",
+          "/lab/metricpilot-kpi-drop-analyzer",
+          "/lab/local-first-ai-executor-loop",
+          "/lab/publishing-principles",
+          ...getBatchTargetSlugs().map((slug) => `/lab/${slug}`)
+        ]
+  )
+);
 const viewportLabel = process.env.VIEWPORT_LABEL || "";
-const artifactSlug = batchTargetSlug;
+const artifactSlug = getBatchTargetSlugs().join(",");
 const requireOverflowCheck = process.env.CHECK_OVERFLOW === "1";
 
 function screenshotName(path) {

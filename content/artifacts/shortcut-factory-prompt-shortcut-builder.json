@@ -1,7 +1,7 @@
 {
   "name": "Shortcut Factory — Prompt Shortcut Builder",
   "category": "Prompt Forge",
-  "promise": "Turns a messy prompt backlog into three reusable shortcuts with consistent naming, clear inputs, and concrete outputs.",
+  "promise": "Turns a messy prompt backlog into three reusable shortcuts: Catalog Triage, Brief to Shortcut, and Prompt QA Pass.",
   "business_value": "Shows a compact prompt product that teams can demo, sell, or reuse inside client delivery and internal operations.",
   "status": "live_demo",
   "protection_level": "limited",

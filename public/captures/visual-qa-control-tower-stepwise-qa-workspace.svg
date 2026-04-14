@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Visual QA Control Tower Stepwise QA Workspace</title>
+  <desc id="desc">Structured visual showing a stepwise QA workspace with demo, question, source QA, component QA, and journey QA.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f3efe7"/>
+      <stop offset="100%" stop-color="#ede5d8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fbf7f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1f1a12" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title { font: 700 56px/1.1 Inter, Arial, sans-serif; fill: #1f1a12; }
+      .subtitle { font: 500 22px/1.4 Inter, Arial, sans-serif; fill: #5f5648; }
+      .label { font: 700 16px/1.2 Inter, Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; fill: #7f7363; }
+      .meta { font: 600 19px/1.4 Inter, Arial, sans-serif; fill: #352d22; }
+      .body { font: 400 18px/1.6 Inter, Arial, sans-serif; fill: #4f4639; }
+      .card-title { font: 700 24px/1.2 Inter, Arial, sans-serif; fill: #1f1a12; }
+      .card-kicker { font: 700 14px/1.2 Inter, Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; fill: #8b7d69; }
+      .card-body { font: 400 17px/1.55 Inter, Arial, sans-serif; fill: #4f4639; }
+      .chip { font: 700 14px/1.2 Inter, Arial, sans-serif; fill: #352d22; }
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="76" y="76" width="1448" height="848" rx="34" fill="url(#panel)" stroke="#d8cbb6"/>
+  </g>
+
+  <g transform="translate(120 132)">
+    <text class="label" x="0" y="0">QA Workspace</text>
+    <text class="title" x="0" y="66">Visual QA Control Tower</text>
+    <text class="subtitle" x="0" y="112">Stepwise QA Workspace</text>
+    <text class="body" x="0" y="158">One operator surface for canonical demos, typed questions, source QA, component QA, and journey QA.</text>
+  </g>
+
+  <g transform="translate(120 320)">
+    <rect x="0" y="0" width="420" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Business value</text>
+    <text class="meta" x="28" y="78">Reduce drift</text>
+    <text class="body" x="28" y="114">Makes harness review auditable and fast enough for operator sign-off.</text>
+    <text class="body" x="28" y="146">Stops ad hoc dumps from becoming the product.</text>
+  </g>
+
+  <g transform="translate(576 320)">
+    <rect x="0" y="0" width="420" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Status</text>
+    <text class="meta" x="28" y="78">live_demo</text>
+    <text class="label" x="28" y="118">Protection level</text>
+    <text class="meta" x="28" y="156">limited</text>
+    <text class="body" x="220" y="78">Public proof only.</text>
+    <text class="body" x="220" y="112">Private harness stays private.</text>
+    <text class="body" x="220" y="146">No dashboard theater.</text>
+  </g>
+
+  <g transform="translate(1032 320)">
+    <rect x="0" y="0" width="392" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Tech stack</text>
+    <text class="body" x="28" y="82">Operator Harness</text>
+    <text class="body" x="28" y="118">QA Workflow</text>
+    <text class="body" x="28" y="154">Content Design</text>
+  </g>
+
+  <g transform="translate(120 560)">
+    <text class="label" x="0" y="0">Mode map</text>
+    <text class="meta" x="0" y="38">5 modes. 5 panels. 3 statuses. Existing harness truth only.</text>
+  </g>
+
+  <g transform="translate(120 610)">
+    <g>
+      <rect x="0" y="0" width="260" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">Mode 01</text>
+      <text class="card-title" x="28" y="76">Demo</text>
+      <text class="card-body" x="28" y="116">Canonical wedge.</text>
+      <text class="card-body" x="28" y="148">Expected vs actual.</text>
+      <text class="card-body" x="28" y="180">Real harness flow.</text>
+    </g>
+    <g transform="translate(290 0)">
+      <rect x="0" y="0" width="260" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">Mode 02</text>
+      <text class="card-title" x="28" y="76">Question</text>
+      <text class="card-body" x="28" y="116">Typed analytics run.</text>
+      <text class="card-body" x="28" y="148">Trace + preview.</text>
+      <text class="card-body" x="28" y="180">Optional expectation.</text>
+    </g>
+    <g transform="translate(580 0)">
+      <rect x="0" y="0" width="260" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">Mode 03</text>
+      <text class="card-title" x="28" y="76">Source QA</text>
+      <text class="card-body" x="28" y="116">Profile source truth.</text>
+      <text class="card-body" x="28" y="148">PASS / FAIL / NOT VERIFIED.</text>
+      <text class="card-body" x="28" y="180">Deterministic checks.</text>
+    </g>
+    <g transform="translate(870 0)">
+      <rect x="0" y="0" width="260" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">Mode 04</text>
+      <text class="card-title" x="28" y="76">Component QA</text>
+      <text class="card-body" x="28" y="116">Inspect one stage.</text>
+      <text class="card-body" x="28" y="148">Evidence over scores.</text>
+      <text class="card-body" x="28" y="180">Mismatch visible.</text>
+    </g>
+    <g transform="translate(1160 0)">
+      <rect x="0" y="0" width="260" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">Mode 05</text>
+      <text class="card-title" x="28" y="76">Journey QA</text>
+      <text class="card-body" x="28" y="116">End-to-end wedge.</text>
+      <text class="card-body" x="28" y="148">Source to preview.</text>
+      <text class="card-body" x="28" y="180">Operator reviewable.</text>
+    </g>
+  </g>
+
+  <g transform="translate(120 900)">
+    <rect x="0" y="-34" width="460" height="42" rx="21" fill="#1f1a12"/>
+    <text class="chip" x="22" y="-6" fill="#f8f3ea">Public proof only. Harness runtime and fixtures stay private.</text>
+  </g>
+</svg>

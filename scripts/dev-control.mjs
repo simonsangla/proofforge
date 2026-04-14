@@ -9,13 +9,25 @@ const logDir = ".artifacts/logs";
 
 const targetPort = Number(process.env.PORT || process.env.TARGET_PORT || 3000);
 const command = process.argv[2];
-const batchTargetSlug = process.env.BATCH_TARGET_SLUG || "local-first-ai-executor-loop";
+function getBatchTargetSlugs() {
+  const raw = process.env.BATCH_TARGET_SLUGS || process.env.BATCH_TARGET_SLUG || "local-first-ai-executor-loop";
+  return raw
+    .split(",")
+    .map((slug) => slug.trim())
+    .filter(Boolean);
+}
+
+function getBatchTargetPages() {
+  return getBatchTargetSlugs().map((slug) => `/lab/${slug}`);
+}
+
 const routesToCheck = [
   "/",
   "/lab",
   "/lab/metricpilot-kpi-drop-analyzer",
   "/lab/local-first-ai-executor-loop",
   "/lab/publishing-principles",
+  ...getBatchTargetPages(),
   "/manifest.webmanifest"
 ];
 
@@ -35,7 +47,7 @@ function writeLog(name, lines) {
 }
 
 function getBatchTargetPage() {
-  return `/lab/${batchTargetSlug}`;
+  return getBatchTargetPages()[0] || "/lab/local-first-ai-executor-loop";
 }
 
 function run(cmd, args) {
@@ -174,7 +186,7 @@ function getHumanReviewUrls() {
   return [
     `http://localhost:${targetPort}/`,
     `http://localhost:${targetPort}/lab`,
-    `http://localhost:${targetPort}${getBatchTargetPage()}`
+    ...getBatchTargetPages().map((page) => `http://localhost:${targetPort}${page}`)
   ];
 }
 
