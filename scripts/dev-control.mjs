@@ -268,7 +268,7 @@ async function devValidate() {
   await acquireBuildLock();
   try {
     cleanNextDir();
-    run("pnpm", ["build"]);
+    run("pnpm", ["exec", "next", "build"]);
   } finally {
     releaseBuildLock();
   }
@@ -314,7 +314,7 @@ async function previewHuman() {
   await acquireBuildLock();
   try {
     cleanNextDir();
-    run("pnpm", ["build"]);
+    run("pnpm", ["exec", "next", "build"]);
   } finally {
     releaseBuildLock();
   }

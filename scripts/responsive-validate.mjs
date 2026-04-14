@@ -106,7 +106,7 @@ async function main() {
   await acquireBuildLock();
   try {
     rmSync(".next", { recursive: true, force: true });
-    run("pnpm", ["build"]);
+    run("pnpm", ["exec", "next", "build"]);
   } finally {
     releaseBuildLock();
   }
