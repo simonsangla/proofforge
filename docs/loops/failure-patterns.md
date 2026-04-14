@@ -41,3 +41,15 @@ Symptom: smoke checks fail on a missing capture URL even though the artifact exi
 Root cause: the smoke list pointed at the wrong file extension for the published capture.
 Fix: smoke the actual published asset path, such as the `.svg` capture URL.
 Prevention rule: every smoke URL must match the exact published artifact path before the run starts.
+
+Case: Component Tracking Wrapper Prop Leak
+Symptom: TrackedLink or TrackedButton lose styling, fail to navigate, or cause React "unknown prop" warnings.
+Root cause: Custom wrapper components did not spread `...props` to the underlying child, or inadvertently passed analytics-specific metadata to the DOM.
+Fix: Use `ComponentPropsWithoutRef`, destructure only needed metadata, and spread the rest to the core component.
+Prevention rule: Every UI wrapper must explicitly support and pass through `className`, `style`, and relevant HTML/Framework attributes via rest parameters.
+
+Case: MetadataBase Missing
+Symptom: Next.js build or dev console throws warnings about relative URLs in metadata for OG/Twitter images.
+Root cause: `metadataBase` was not set in the root `metadata` object, preventing Next.js from resolving relative asset paths.
+Fix: Add `metadataBase: new URL(...)` to the top-level metadata export.
+Prevention rule: Every new Next.js project must define `metadataBase` in the root layout to ensure stable social card generation.

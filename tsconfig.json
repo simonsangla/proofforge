@@ -4,7 +4,8 @@
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ES2022"
+      "ES2022",
+      "WebWorker"
     ],
     "allowJs": false,
     "skipLibCheck": true,

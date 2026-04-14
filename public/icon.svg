@@ -1,9 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
-  <title id="title">ProofForge Icon</title>
-  <desc id="desc">Geometric mark for ProofForge public portfolio shell.</desc>
-  <rect width="512" height="512" rx="112" fill="#f4efe8"/>
-  <rect x="128" y="128" width="104" height="104" rx="24" fill="#1f1a12"/>
-  <rect x="280" y="128" width="104" height="104" rx="24" fill="#1f1a12"/>
-  <rect x="128" y="280" width="104" height="104" rx="24" fill="#1f1a12"/>
-  <rect x="280" y="280" width="104" height="104" rx="24" fill="#1f1a12"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="gf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111111" />
+      <stop offset="100%" stop-color="#333333" />
+    </linearGradient>
+    <linearGradient id="gl" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#aaaaaa" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#gf)" />
+  <path d="M160 160V352H208V288H264C303.7 288 336 255.7 336 216C336 176.3 303.7 160 264 160H160ZM208 208H264C268.4 208 288 208 288 224C288 240 268.4 240 264 240H208V208Z" fill="url(#gl)"/>
+  <path d="M256 256H352V304H304V352H256V256Z" fill="url(#gl)"/>
 </svg>

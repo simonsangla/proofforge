@@ -1,0 +1,17 @@
+{
+  "name": "Distributed Systems Resilience Audit",
+  "category": "Technical Infrastructure",
+  "promise": "Identify and remediate cascading failure points in highly-concurrent distributed microservices.",
+  "business_value": "Secure 99.999% uptime, prevent catastrophic data loss during peak loads, and optimize cross-service latency.",
+  "status": "internal_harness",
+  "protection_level": "private",
+  "link": "/lab/distributed-systems-resilience-audit",
+  "capture": "/images/captures/resilience-audit.svg",
+  "tech_stack": [
+    "Chaos Mesh",
+    "Prometheus",
+    "eBPF",
+    "Golang"
+  ],
+  "date": "2026-04-14T00:00:00Z"
+}

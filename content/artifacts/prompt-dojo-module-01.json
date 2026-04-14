@@ -3,7 +3,7 @@
   "category": "Prompt Dojo",
   "promise": "Teaches the structural foundations of a strong prompt using role, objective, output, and constraints.",
   "business_value": "Shows a reusable training asset that can be expanded into a premium learning product or consulting tool.",
-  "status": "concept",
+  "status": "spec_only",
   "protection_level": "limited",
   "link": "/lab/prompt-dojo-module-01",
   "capture": "/captures/prompt-dojo-module-01.png",

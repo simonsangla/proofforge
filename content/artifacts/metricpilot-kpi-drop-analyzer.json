@@ -3,7 +3,7 @@
   "category": "Data Tool",
   "promise": "Turns a KPI dip into a fast read on likely drivers, so a team can inspect the right segment before the next meeting.",
   "business_value": "Shows a commercially useful analytics workflow for founders, operators, and consultants who need faster root-cause triage on revenue or activation drops.",
-  "status": "concept",
+  "status": "spec_only",
   "protection_level": "public",
   "link": "/lab/metricpilot-kpi-drop-analyzer",
   "capture": "/captures/metricpilot-kpi-drop-analyzer.svg",

@@ -1,24 +1,17 @@
-import promptDojo from "@/content/artifacts/prompt-dojo-module-01.json";
-import artifactContract10FieldCanonicalSystem from "@/content/artifacts/artifact-contract-10-field-canonical-system.json";
-import localFirstAiExecutorLoop from "@/content/artifacts/local-first-ai-executor-loop.json";
-import metricpilotKpiDropAnalyzer from "@/content/artifacts/metricpilot-kpi-drop-analyzer.json";
-import promptOptimizer from "@/content/artifacts/prompt-optimizer-chatgpt-like-prompt-refiner.json";
-import publishingPrinciples from "@/content/artifacts/publishing-principles.json";
-import shortcutFactory from "@/content/artifacts/shortcut-factory-prompt-shortcut-builder.json";
-import visualQaControlTower from "@/content/artifacts/visual-qa-control-tower-stepwise-qa-workspace.json";
+import fs from "fs";
+import path from "path";
+import { ArtifactSchema, type Artifact } from "./schema";
+export type { Artifact };
 
-export type Artifact = typeof promptDojo;
+const artifactsDir = path.join(process.cwd(), "content/artifacts");
 
-export const artifacts: Artifact[] = [
-  promptOptimizer,
-  shortcutFactory,
-  visualQaControlTower,
-  metricpilotKpiDropAnalyzer,
-  artifactContract10FieldCanonicalSystem,
-  localFirstAiExecutorLoop,
-  publishingPrinciples,
-  promptDojo
-];
+export const artifacts: Artifact[] = fs.readdirSync(artifactsDir)
+  .filter(f => f.endsWith(".json"))
+  .map(file => {
+    const filePath = path.join(artifactsDir, file);
+    const content = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+    return ArtifactSchema.parse(content);
+  });
 
 const artifactDetailCopy: Record<string, { audience: string; publicPrivate: string; demo: string }> = {
   "prompt-optimizer-chatgpt-like-prompt-refiner": {
@@ -60,3 +53,4 @@ export function getArtifactDetailCopy(slug: string) {
     demo: "Real demo status not expanded on this page."
   };
 }
+

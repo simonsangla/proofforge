@@ -1,7 +1,7 @@
 # SYSTEM STATE: PROOFFORGE PUBLIC
 
-- **Phase**: Phase 1 — Portfolio Shell
-- **Repo Role**: Public PWA proof surface only
+- **Phase**: Phase 3 — Conversion & Reach (Locked)
+- **Repo Role**: Public PWA proof surface and lead generation point
 - **Core Stack**: Next.js App Router, TypeScript, Tailwind CSS, local JSON content, Markdown content
 - **Locked Routes**:
   - `/`
@@ -26,11 +26,13 @@
   3. New artifacts must follow the canonical 10-field contract.
   4. Content and code must remain separated.
   5. Navigation must remain shallow.
-  6. Phase 1 must not expand scope before Phase 2 content exists.
-- **Known Gaps**:
-  - placeholder capture may still exist until replaced by real proof
-  - PWA manifest/service worker not yet implemented unless already present
-  - filtering/sorting may still be basic Phase 1 logic
+  6. Phase 3 must be locked before Phase 4 (Lead Gen Integration) begins.
+- **Implementation Status**:
+  - **PWA**: Implemented with Serwist and manifest.webmanifest.
+  - **Analytics**: Client-side tracking wrappers active.
+  - **SEO**: Dynamic metadata injection with metadataBase active.
+  - **Conversion**: Protection-based CTA logic (Rose theme) active.
 - **Public/Private Boundary**:
   - Public repo contains portfolio shell, public artifact metadata, notes, captures, and limited proof surfaces.
-  - Private logic must live outside this repo.
+  - Private logic (Full Proof Engines) must live outside this repo.
+

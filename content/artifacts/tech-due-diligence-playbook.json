@@ -1,0 +1,17 @@
+{
+  "name": "Tech Due Diligence Playbook",
+  "category": "M&A Advisory",
+  "promise": "Standardized, automated evaluation framework for technical debt, architectural viability, and team velocity during M&A.",
+  "business_value": "Accelerate deal velocity, uncover hidden architectural liabilities, and provide crystal-clear post-merger integration roadmaps.",
+  "status": "spec_only",
+  "protection_level": "private",
+  "link": "/lab/tech-due-diligence-playbook",
+  "capture": "/images/captures/tdd-playbook.svg",
+  "tech_stack": [
+    "SonarQube",
+    "Datadog",
+    "GitHub Actions",
+    "Python"
+  ],
+  "date": "2026-04-14T00:00:00Z"
+}

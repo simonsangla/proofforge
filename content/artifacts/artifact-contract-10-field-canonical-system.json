@@ -3,7 +3,7 @@
   "category": "Playbook",
   "promise": "Defines one exact public artifact schema so every proof unit stays consistent, compact, and reviewable.",
   "business_value": "Gives ProofForge a repeatable publishing contract that keeps public proofs easy to scan, compare, and ship.",
-  "status": "concept",
+  "status": "spec_only",
   "protection_level": "public",
   "link": "/lab/artifact-contract-10-field-canonical-system",
   "capture": "/captures/artifact-contract-10-field-canonical-system.svg",

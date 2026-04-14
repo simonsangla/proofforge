@@ -1,0 +1,17 @@
+{
+  "name": "AI Governance Framework",
+  "category": "Strategic Consulting",
+  "promise": "Establish a bulletproof, SOC2-compliant governance structure for enterprise AI deployments.",
+  "business_value": "Mitigate operational risk, ensure strict regulatory alignment, and unlock safe, scalable AI adoption across decentralized global fleets.",
+  "status": "spec_only",
+  "protection_level": "limited",
+  "link": "/lab/ai-governance-framework",
+  "capture": "/images/captures/ai-gov-framework.svg",
+  "tech_stack": [
+    "Policy-as-Code",
+    "Open Policy Agent (OPA)",
+    "LLM-Guard",
+    "Rego"
+  ],
+  "date": "2026-04-14T00:00:00Z"
+}
