@@ -1,0 +1,17 @@
+{
+  "name": "Prompto — Daily Prompt Trainer",
+  "category": "Training App",
+  "promise": "Trains practical prompting skills through daily missions, instant deterministic scoring, and a retry loop that forces deliberate improvement.",
+  "business_value": "Shows a deployable, self-contained prompt-training product: no backend, no auth, mobile-first PWA with localStorage progress — a launchable micro-SaaS shell.",
+  "status": "live_demo",
+  "protection_level": "public",
+  "link": "/lab/prompto-daily-prompt-trainer",
+  "capture": "/captures/prompto-daily-prompt-trainer.png",
+  "tech_stack": [
+    "React",
+    "Vite",
+    "TypeScript",
+    "localStorage"
+  ],
+  "date": "2026-04-14"
+}
