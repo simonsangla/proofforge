@@ -21,7 +21,7 @@ function getBatchTargetPages() {
   return getBatchTargetSlugs().map((slug) => `/lab/${slug}`);
 }
 
-const routesToCheck = [
+const routesToCheck = Array.from(new Set([
   "/",
   "/lab",
   "/lab/metricpilot-kpi-drop-analyzer",
@@ -29,7 +29,7 @@ const routesToCheck = [
   "/lab/publishing-principles",
   ...getBatchTargetPages(),
   "/manifest.webmanifest"
-];
+]));
 
 function sanitizedEnv(extra = {}) {
   const env = { ...process.env, ...extra };
@@ -57,7 +57,13 @@ function run(cmd, args) {
 function openInBrowser(urls) {
   for (const url of urls) {
     try {
-      run("open", [url]);
+      if (process.platform === "darwin") {
+        run("open", [url]);
+      } else if (process.platform === "win32") {
+        run("cmd", ["/c", "start", "", url]);
+      } else {
+        run("xdg-open", [url]);
+      }
       console.log(`browser open ok: ${url}`);
     } catch (error) {
       throw new Error(`browser open failed: ${url}`);
@@ -223,7 +229,7 @@ function devReset() {
     console.log(`final preview URL: http://localhost:${targetPort}`);
     const child = spawn("pnpm", ["dev"], {
       stdio: "inherit",
-      env: { ...process.env, PORT: String(targetPort) }
+      env: sanitizedEnv({ PORT: String(targetPort) })
     });
     child.on("exit", (code) => process.exit(code ?? 0));
     return;
@@ -298,6 +304,7 @@ async function devValidate() {
     `routes=${routesToCheck.join(",")}`,
     `status=ok`
   ]);
+  child.kill("SIGTERM");
   await exitPromise;
 }
 

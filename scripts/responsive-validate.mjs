@@ -127,6 +127,8 @@ async function main() {
         PREVIEW_URL: baseURL,
         VALIDATION_PAGES: pages.join(","),
         VIEWPORT_LABEL: viewport.label,
+        VIEWPORT_WIDTH: String(viewport.width),
+        VIEWPORT_HEIGHT: String(viewport.height),
         CHECK_OVERFLOW: "1",
         VALIDATION_ARTIFACT_ROOT: artifactRoot,
         PORT: String(port),

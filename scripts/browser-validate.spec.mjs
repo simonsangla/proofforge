@@ -12,6 +12,11 @@ function getBatchTargetSlugs() {
 }
 
 const artifactRoot = process.env.VALIDATION_ARTIFACT_ROOT || ".artifacts/validation/browser";
+const viewportWidth = Number(process.env.VIEWPORT_WIDTH || 0);
+const viewportHeight = Number(process.env.VIEWPORT_HEIGHT || 0);
+if (viewportWidth > 0 && viewportHeight > 0) {
+  test.use({ viewport: { width: viewportWidth, height: viewportHeight } });
+}
 const pages = Array.from(
   new Set(
     process.env.VALIDATION_PAGES
