@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Local-First AI Executor Loop</title>
+  <desc id="desc">Structured visual for the local-first validation loop.</desc>
+  <rect width="1200" height="800" fill="#f4efe8"/>
+  <rect x="72" y="72" width="1056" height="656" rx="28" fill="#fffaf3" stroke="#d9cdbb"/>
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" fill="#1f1a12">Local-First AI Executor Loop</text>
+  <text x="120" y="198" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="500" fill="#5f5648">build → preview → browser smoke → human handoff</text>
+  <g transform="translate(120 280)">
+    <rect width="180" height="160" rx="20" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#8b7d69">1</text>
+    <text x="22" y="82" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f1a12">Build</text>
+    <text x="22" y="118" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Run clean.</text>
+  </g>
+  <g transform="translate(332 280)">
+    <rect width="180" height="160" rx="20" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#8b7d69">2</text>
+    <text x="22" y="82" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f1a12">Preview</text>
+    <text x="22" y="118" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Open local.</text>
+  </g>
+  <g transform="translate(544 280)">
+    <rect width="180" height="160" rx="20" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#8b7d69">3</text>
+    <text x="22" y="82" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f1a12">Smoke</text>
+    <text x="22" y="118" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Check routes.</text>
+  </g>
+  <g transform="translate(756 280)">
+    <rect width="180" height="160" rx="20" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#8b7d69">4</text>
+    <text x="22" y="82" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700" fill="#1f1a12">Handoff</text>
+    <text x="22" y="118" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Human review.</text>
+  </g>
+</svg>

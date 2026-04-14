@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Publishing Principles</title>
+  <desc id="desc">Structured visual for a short publishing principles note.</desc>
+  <rect width="1200" height="800" fill="#f4efe8"/>
+  <rect x="72" y="72" width="1056" height="656" rx="28" fill="#fffaf3" stroke="#d9cdbb"/>
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700" fill="#1f1a12">Publishing Principles</text>
+  <text x="120" y="200" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="500" fill="#5f5648">Ship meaningful proofs, not filler.</text>
+  <g transform="translate(120 300)">
+    <rect width="280" height="200" rx="22" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="24" y="46" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">Rule</text>
+    <text x="24" y="88" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f1a12">Public proof</text>
+    <text x="24" y="126" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Say something useful.</text>
+  </g>
+  <g transform="translate(460 300)">
+    <rect width="280" height="200" rx="22" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="24" y="46" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">Rule</text>
+    <text x="24" y="88" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f1a12">Clear value</text>
+    <text x="24" y="126" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Explain why it matters.</text>
+  </g>
+  <g transform="translate(800 300)">
+    <rect width="280" height="200" rx="22" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="24" y="46" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">Rule</text>
+    <text x="24" y="88" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f1a12">Tight scope</text>
+    <text x="24" y="126" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Keep only what ships.</text>
+  </g>
+</svg>

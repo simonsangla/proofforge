@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Shortcut Factory Prompt Shortcut Builder</title>
+  <desc id="desc">Structured visual showing one prompt factory artifact and three concrete prompt shortcuts.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f4efe6"/>
+      <stop offset="100%" stop-color="#efe7da"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fbf7f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1f1a12" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .title { font: 700 54px/1.1 Inter, Arial, sans-serif; fill: #1f1a12; }
+      .subtitle { font: 500 22px/1.4 Inter, Arial, sans-serif; fill: #5f5648; }
+      .label { font: 700 16px/1.2 Inter, Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; fill: #7f7363; }
+      .meta { font: 600 19px/1.4 Inter, Arial, sans-serif; fill: #352d22; }
+      .body { font: 400 18px/1.6 Inter, Arial, sans-serif; fill: #4f4639; }
+      .card-title { font: 700 24px/1.2 Inter, Arial, sans-serif; fill: #1f1a12; }
+      .card-kicker { font: 700 14px/1.2 Inter, Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; fill: #8b7d69; }
+      .card-body { font: 400 17px/1.55 Inter, Arial, sans-serif; fill: #4f4639; }
+      .chip { font: 700 14px/1.2 Inter, Arial, sans-serif; fill: #352d22; }
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <g filter="url(#shadow)">
+    <rect x="76" y="76" width="1448" height="848" rx="34" fill="url(#panel)" stroke="#d8cbb6"/>
+  </g>
+
+  <g transform="translate(120 132)">
+    <text class="label" x="0" y="0">Prompt Forge</text>
+    <text class="title" x="0" y="66">Shortcut Factory</text>
+    <text class="subtitle" x="0" y="112">Prompt Shortcut Builder</text>
+    <text class="body" x="0" y="158">Narrow promise: turn a messy prompt backlog into three reusable shortcuts with clear inputs, outputs, and reuse intent.</text>
+  </g>
+
+  <g transform="translate(120 320)">
+    <rect x="0" y="0" width="420" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Business value</text>
+    <text class="meta" x="28" y="78">Reusable prompt product</text>
+    <text class="body" x="28" y="114">Teams can demo it, sell it, or use it as a repeatable internal delivery asset.</text>
+    <text class="body" x="28" y="146">Improves naming, removes generic prompts, and standardizes outputs.</text>
+  </g>
+
+  <g transform="translate(576 320)">
+    <rect x="0" y="0" width="420" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Status</text>
+    <text class="meta" x="28" y="78">live_demo</text>
+    <text class="label" x="28" y="118">Protection level</text>
+    <text class="meta" x="28" y="156">limited</text>
+    <text class="body" x="220" y="78">Public proof only.</text>
+    <text class="body" x="220" y="112">Private implementation stays out.</text>
+    <text class="body" x="220" y="146">No backend. No hidden engine.</text>
+  </g>
+
+  <g transform="translate(1032 320)">
+    <rect x="0" y="0" width="392" height="186" rx="24" fill="#f9f5ee" stroke="#d8cbb6"/>
+    <text class="label" x="28" y="40">Tech stack</text>
+    <text class="body" x="28" y="82">Static HTML</text>
+    <text class="body" x="28" y="118">Prompt Engineering</text>
+    <text class="body" x="28" y="154">Content Design</text>
+  </g>
+
+  <g transform="translate(120 560)">
+    <text class="label" x="0" y="0">Prompt catalog</text>
+    <text class="meta" x="0" y="38">Exactly 3 new shortcuts. Concrete. Reusable. Commercially relevant.</text>
+  </g>
+
+  <g transform="translate(120 610)">
+    <g>
+      <rect x="0" y="0" width="436" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">01 / Catalog hygiene</text>
+      <text class="card-title" x="28" y="76">Catalog Triage</text>
+      <text class="card-body" x="28" y="116">Task: sort prompt backlog into keep, merge, or drop.</text>
+      <text class="card-body" x="28" y="148">Context: teams with too many drafts and weak naming.</text>
+      <text class="card-body" x="28" y="180">Output: ranked list with dedupe notes and cleaner labels.</text>
+    </g>
+    <g transform="translate(482 0)">
+      <rect x="0" y="0" width="436" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">02 / Client delivery</text>
+      <text class="card-title" x="28" y="76">Brief to Shortcut</text>
+      <text class="card-body" x="28" y="116">Task: convert one client brief into a reusable prompt.</text>
+      <text class="card-body" x="28" y="148">Context: agencies and consultants shipping repeatable work.</text>
+      <text class="card-body" x="28" y="180">Output: final prompt plus missing inputs and constraints.</text>
+    </g>
+    <g transform="translate(964 0)">
+      <rect x="0" y="0" width="436" height="244" rx="26" fill="#ffffff" stroke="#d8cbb6"/>
+      <text class="card-kicker" x="28" y="40">03 / Quality control</text>
+      <text class="card-title" x="28" y="76">Prompt QA Pass</text>
+      <text class="card-body" x="28" y="116">Task: review a prompt for ambiguity and weak outputs.</text>
+      <text class="card-body" x="28" y="148">Context: teams publishing prompts internally or externally.</text>
+      <text class="card-body" x="28" y="180">Output: redline, revised prompt, and short risk list.</text>
+    </g>
+  </g>
+
+  <g transform="translate(120 900)">
+    <rect x="0" y="-34" width="360" height="42" rx="21" fill="#1f1a12"/>
+    <text class="chip" x="22" y="-6" fill="#f8f3ea">One prompt pack. Three shortcuts. Clear reuse.</text>
+  </g>
+</svg>

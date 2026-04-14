@@ -1,0 +1,16 @@
+{
+  "name": "Prompt Optimizer — ChatGPT-like Prompt Refiner",
+  "category": "Prompt Tool",
+  "promise": "Refines messy prompts into tighter, more testable prompts with clearer intent, constraints, and output shape.",
+  "business_value": "Shows a practical prompt product for operators, consultants, and teams that need faster prompt quality without starting over.",
+  "status": "live_demo",
+  "protection_level": "limited",
+  "link": "/lab/prompt-optimizer-chatgpt-like-prompt-refiner",
+  "capture": "/captures/prompt-optimizer-chatgpt-like-prompt-refiner.svg",
+  "tech_stack": [
+    "React PWA",
+    "Firebase",
+    "Prompt Engineering"
+  ],
+  "date": "2026-04-13"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ProofForge",
+  "short_name": "ProofForge",
+  "description": "ProofForge public portfolio PWA shell",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4efe8",
+  "theme_color": "#f4efe8",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

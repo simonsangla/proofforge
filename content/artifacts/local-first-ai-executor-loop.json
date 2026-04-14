@@ -1,0 +1,16 @@
+{
+  "name": "Local-First AI Executor Loop",
+  "category": "Playbook",
+  "promise": "Sets a strict local loop for build, preview, route checks, and human handoff before any UI claim.",
+  "business_value": "Turns executor discipline into a reusable proof unit for safer, faster UI batches.",
+  "status": "concept",
+  "protection_level": "public",
+  "link": "/lab/local-first-ai-executor-loop",
+  "capture": "/captures/local-first-ai-executor-loop.svg",
+  "tech_stack": [
+    "Content Design",
+    "Next.js",
+    "PWA"
+  ],
+  "date": "2026-04-13"
+}

@@ -5,15 +5,16 @@ import { artifacts } from "@/lib/content";
 
 export default function HomePage() {
   const featured = artifacts[0];
+  const pack = artifacts.slice(0, 3);
 
   return (
     <SiteShell>
       <section className="grid gap-8">
         <div className="max-w-2xl">
           <p className="text-xs uppercase tracking-[0.3em] text-muted">Public proof surface</p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl">Portfolio PWA for high-signal artifacts.</h1>
+          <h1 className="mt-3 text-4xl font-semibold tracking-tight md:text-6xl">Three proof units. One selling pack.</h1>
           <p className="mt-4 max-w-xl text-base leading-7 text-muted">
-            ProofForge is a proof engine, not a gallery. It publishes compact artifacts that show promise, business value, and proof.
+            ProofForge publishes compact artifacts that show promise, business value, and proof. Mobile review first. Noise last.
           </p>
         </div>
 
@@ -27,6 +28,15 @@ export default function HomePage() {
             <ArtifactCard artifact={featured} />
           </div>
         </div>
+
+        <section>
+          <h2 className="text-lg font-semibold">Selling pack</h2>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            {pack.map((artifact) => (
+              <ArtifactCard key={artifact.name} artifact={artifact} />
+            ))}
+          </div>
+        </section>
 
         <section>
           <h2 className="text-lg font-semibold">Featured artifacts</h2>
