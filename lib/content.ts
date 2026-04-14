@@ -31,6 +31,12 @@ const artifactDetailCopy: Record<string, { audience: string; publicPrivate: stri
     publicPrivate:
       "Public surface: proof page, capture, and short spec summary. Private surface: harness runtime, fixtures, and CLI workflow stay in the source repos.",
     demo: "Real demo attempted on the local harness surface and spec-backed flow. The proof page documents an actual QA workspace, not a mock dashboard."
+  },
+  "prompto-daily-prompt-trainer": {
+    audience: "Founders, operators, and L&D leads who want a deployable prompt-training product they can ship or license — not a course, a tool.",
+    publicPrivate:
+      "Public surface: live app at https://prompto-iota.vercel.app and this proof page. Private surface: scoring rubric weights and future AI critique seam stay in the source repo.",
+    demo: "Live at https://prompto-iota.vercel.app — mobile-first, runs fully in browser, no auth, no backend. Complete a mission, see deterministic scoring across 6 criteria, retry to improve."
   }
 };
 
