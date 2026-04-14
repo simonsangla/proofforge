@@ -38,6 +38,7 @@ function sanitizedEnv(extra = {}) {
   for (const key of Object.keys(env)) {
     if (key.toLowerCase().startsWith("npm_config_")) delete env[key];
   }
+  env.NEXT_TELEMETRY_DISABLED = "1";
   delete env.NO_COLOR;
   delete env.FORCE_COLOR;
   return env;
@@ -113,8 +114,16 @@ async function main() {
   mkdirSync(artifactRoot, { recursive: true });
   mkdirSync(logRoot, { recursive: true });
   const child = spawn("pnpm", ["exec", "next", "start", "-p", String(port)], {
-    stdio: "inherit",
-    env: sanitizedEnv({ PORT: String(port) })
+    stdio: ["inherit", "inherit", "pipe"],
+    env: sanitizedEnv({ PORT: String(port), NEXT_TELEMETRY_DISABLED: "1" })
+  });
+  child.stderr.on("data", (chunk) => {
+    const output = chunk
+      .toString()
+      .split(/\r?\n/)
+      .filter((line) => line && !line.includes('"next start" does not work with "output: standalone" configuration'))
+      .join("\n");
+    if (output) process.stderr.write(`${output}\n`);
   });
   const exitPromise = new Promise((resolve) => child.on("exit", resolve));
   await waitForServer();
