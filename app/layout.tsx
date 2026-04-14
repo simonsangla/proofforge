@@ -11,11 +11,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const shouldEnableAnalytics = process.env.VERCEL === "1";
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
         {children}
-        <Analytics />
+        {shouldEnableAnalytics ? <Analytics /> : null}
       </body>
     </html>
   );
