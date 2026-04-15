@@ -7,7 +7,7 @@
 - Current public URL: https://proofforge-sooty.vercel.app
 - Current local validation commands: `pnpm build`, `pnpm lint`, `pnpm ci:local`, `pnpm dev:validate`, `pnpm preview:human`, `pnpm responsive:validate`, `pnpm prod:smoke`
 - Current required validation flow: clean build -> local preview -> browser smoke -> human open -> responsive validation -> public smoke
-- Current shipped artifacts: 10 (8 prior + MetricPilot updated + Refinr added; Prompto unchanged)
+- Current shipped artifacts: 9 (8 prior + Refinr added; MetricPilot updated in place; Prompto unchanged)
 - Active workflow commands: `pnpm lint`, `pnpm dev:validate`, `pnpm preview:human`, `pnpm browser:validate`, `pnpm responsive:validate`, `pnpm prod:smoke`
 - Current operational artifact root: `.artifacts/validation/{browser,responsive,smoke}` plus `.artifacts/logs`
 - Local GitHub Actions emulation: `pnpm ci:local` uses act with Colima Docker host and `--container-daemon-socket unix:///var/run/docker.sock`
@@ -79,8 +79,7 @@ Added 3 credible first-wave proof records using only verified audit evidence.
 - Refinr capture path `/captures/refinr-local-first-prompt-workshop.svg` set as placeholder — file does not exist; page will 404 on image load until asset is created
 
 ### Known gaps
-- `public/captures/refinr-local-first-prompt-workshop.svg` — MISSING. Must be created before this batch is fully ship-ready.
 - Repo status enum (`live_demo | internal_harness | spec_only | protected`) is out of sync with the canonical ProofForge docs which define a `replica` status. Schema refactor is deferred structural work — do not fix in the next content batch.
 
 ### Next bounded batch
-Create `public/captures/refinr-local-first-prompt-workshop.svg` (minimal SVG proof capture matching existing style), then merge.
+Merge `codex/first-wave-artifacts` to main — all 3 artifact records complete, all captures verified and loading.
