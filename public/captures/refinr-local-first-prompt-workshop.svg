@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Refinr Local-First Prompt Workshop</title>
+  <desc id="desc">Structured visual for a local-first prompt workshop with clarification, scoring, diffing, and history.</desc>
+  <rect width="1200" height="800" fill="#f4efe8"/>
+  <rect x="72" y="72" width="1056" height="656" rx="28" fill="#fffaf3" stroke="#d9cdbb"/>
+
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="700" fill="#1f1a12">Refinr</text>
+  <text x="120" y="198" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="500" fill="#5f5648">Local-First Prompt Workshop</text>
+  <text x="120" y="256" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">Clarify, score, diff, and track prompts locally — no cloud, no auth, BYOK.</text>
+
+  <g transform="translate(120 310)">
+    <rect width="230" height="220" rx="22" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">CLARIFY</text>
+    <text x="22" y="88" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f1a12">Sharpen intent</text>
+    <text x="22" y="128" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Identify ambiguity.</text>
+    <text x="22" y="158" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Tighten constraints.</text>
+  </g>
+
+  <g transform="translate(380 310)">
+    <rect width="230" height="220" rx="22" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">SCORE</text>
+    <text x="22" y="88" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f1a12">Rate quality</text>
+    <text x="22" y="128" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Rubric-based.</text>
+    <text x="22" y="158" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Instant feedback.</text>
+  </g>
+
+  <g transform="translate(640 310)">
+    <rect width="230" height="220" rx="22" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">DIFF</text>
+    <text x="22" y="88" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f1a12">Compare edits</text>
+    <text x="22" y="128" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Before vs after.</text>
+    <text x="22" y="158" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Track improvement.</text>
+  </g>
+
+  <g transform="translate(900 310)">
+    <rect width="228" height="220" rx="22" fill="#ffffff" stroke="#d9cdbb"/>
+    <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="2" fill="#8b7d69">HISTORY</text>
+    <text x="22" y="88" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#1f1a12">Local log</text>
+    <text x="22" y="128" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">Persisted locally.</text>
+    <text x="22" y="158" font-family="Inter, Arial, sans-serif" font-size="17" fill="#4f4639">No backend needed.</text>
+  </g>
+
+  <g transform="translate(120 590)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#8b7d69">STACK</text>
+    <text x="0" y="34" font-family="Inter, Arial, sans-serif" font-size="18" fill="#4f4639">TypeScript · localStorage · BYOK</text>
+  </g>
+
+  <g transform="translate(120 680)">
+    <rect x="0" y="-34" width="380" height="44" rx="22" fill="#1f1a12"/>
+    <text x="22" y="-6" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#f8f3ea">Local-first. No cloud required. BYOK.</text>
+  </g>
+</svg>
