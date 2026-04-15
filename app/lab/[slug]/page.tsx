@@ -5,8 +5,9 @@ import { SiteShell } from "@/components/site-shell";
 import { getArtifactBySlug, getArtifactDetailCopy } from "@/lib/content";
 import { TrackedLink, TrackedButton } from "@/components/analytics";
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const artifact = getArtifactBySlug(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const artifact = getArtifactBySlug(slug);
   if (!artifact) return { title: "Not Found" };
 
   return {
@@ -20,10 +21,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ArtifactPage({ params }: { params: { slug: string } }) {
-  const artifact = getArtifactBySlug(params.slug);
+export default async function ArtifactPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const artifact = getArtifactBySlug(slug);
   if (!artifact) return notFound();
-  const detail = getArtifactDetailCopy(params.slug);
+  const detail = getArtifactDetailCopy(slug);
 
   const protectionLevelValue = (artifact.protection_level === "private") ? 2 : (artifact.protection_level === "protected" ? 3 : (artifact.protection_level === "limited" ? 1 : 0));
   const showCTA = protectionLevelValue > 1;
