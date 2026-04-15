@@ -1,0 +1,12 @@
+{
+  "name": "Refinr — Local-First Prompt Workshop",
+  "category": "Prompt Tool",
+  "promise": "Local-first AI prompt workshop with clarification, scoring, diffing, and history — no cloud required.",
+  "business_value": "Productized-service angle for prompt quality, prompt ops, and internal enablement. BYOK and local persistence keep the proof lightweight and low-friction.",
+  "status": "internal_harness",
+  "protection_level": "limited",
+  "link": "/lab/refinr-local-first-prompt-workshop",
+  "capture": "/captures/refinr-local-first-prompt-workshop.svg",
+  "tech_stack": ["TypeScript", "localStorage", "BYOK"],
+  "date": "2026-04-15"
+}

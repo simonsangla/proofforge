@@ -37,6 +37,18 @@ const artifactDetailCopy: Record<string, { audience: string; publicPrivate: stri
     publicPrivate:
       "Public surface: live app at https://prompto-iota.vercel.app and this proof page. Private surface: scoring rubric weights and future AI critique seam stay in the source repo.",
     demo: "Live at https://prompto-iota.vercel.app — mobile-first, runs fully in browser, no auth, no backend. Complete a mission, see deterministic scoring across 6 criteria, retry to improve."
+  },
+  "metricpilot-kpi-drop-analyzer": {
+    audience: "B2C founders and operators who need to diagnose a KPI drop before the next meeting — not a data analyst, a decision-maker.",
+    publicPrivate:
+      "Public surface: live demo at the source repo with synthetic demo data and this proof page. Private surface: live Snowflake integration path and proprietary data connectors stay outside the public proof surface.",
+    demo: "Demo defaults to synthetic data — no credentials required. Verified repo evidence states DEMO_MODE is enabled by default and the live data path is explicitly bounded as not fully shipped."
+  },
+  "refinr-local-first-prompt-workshop": {
+    audience: "Teams running prompt quality reviews, operators building internal AI enablement, and consultants who want a prompt-ops tool they can run locally.",
+    publicPrivate:
+      "Public surface: this proof page and a sanitized summary. Private surface: full source, persistence implementation, and tone provenance logic remain in the source repo. Extraction mode for this artifact is sanitized_summary.",
+    demo: "Runnable locally per the source repo README with BYOK, local persistence, and test coverage for persistence, migrations, and tone provenance. No public deployment is verified in this batch."
   }
 };
 
