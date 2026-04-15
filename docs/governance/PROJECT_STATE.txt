@@ -1,0 +1,65 @@
+PROJECT_STATE
+
+Objective
+
+Lock ProofForge as a continuous proof-of-work system with deterministic architecture, artifact contract, storage, and continuity rules before implementation detail.    
+
+Current Status
+	•	ProofForge name, positioning, and system purpose are fixed: a portfolio PWA designed to publish 5 to 7 high-signal items per week.    
+	•	ARCHI-FIRST source material is present: product principles, information architecture, data model, storage structure, repo structure, status model, homepage positioning, glossary, copy system, and roadmap files were loaded in this chat.          
+	•	Canonical artifact contract is fixed at 10 fields: name, category, promise, business_value, status, protection_level, link, capture, tech_stack, date.    
+	•	Deterministic storage pattern is fixed: metadata in /content/artifacts/, notes in /content/notes/, captures in /public/captures/, with private logic outside the public repo.  
+	•	Top-level page map is fixed: /, /lab, /lab/[slug], /play/[slug], /replica/[slug], /notes, /about.  
+	•	Status and protection model are fixed, including expected use of private_engine + private and replica + limited.  
+	•	Prompt Dojo Module 01 exists as an approved starter artifact in both markdown and artifact JSON form.    
+	•	Repo state, live preview state, and route validity remain Unverified in this chat. No local runtime validation was performed.
+
+Decisions Made
+	•	ProofForge is a proof engine, not a gallery.  
+	•	One artifact equals one atomic proof unit and must follow the canonical 10-field contract.    
+	•	Weekly publishing target remains 5 to 7 meaningful proofs, not 7 heavy items.    
+	•	Public-proof / private-moat split is mandatory.    
+	•	Navigation must remain shallow and deterministic.  
+	•	Phase rule stands: do not expand feature scope before Phase 2 content exists.  
+	•	/handoff should be used as the continuity checkpoint primitive for cross-chat state compression. This rule was defined in the current session but not yet verified as pasted into project settings.
+
+Constraints
+	•	No backend, auth, DB, CMS, or infra expansion unless explicitly approved.
+	•	No broad refactors.
+	•	No breaking the canonical 10-field artifact contract.
+	•	Public repo must remain public-only.
+	•	Private moat logic must not leak.
+	•	Output should stay short, declarative, precise, and outcome-oriented.
+These constraints align with the current ProofForge operating system and the loaded structural files.      
+
+Risks / Blockers
+	•	Unverified project instruction state: the custom instruction and /handoff block may not yet be pasted into the project settings.
+	•	Unverified repo truth: no repo scan, no local preview, no route verification, no validation commands run.
+	•	Risk of drift: architecture is documented, but without a checked PROJECT_STATE.md or repo-local handoff file, future chats can fragment.
+
+Open Questions
+	•	Has the final custom instruction, including the /handoff command block, been pasted into ProofForge project settings?
+	•	Which file will be the canonical continuity file in-project: PROJECT_STATE.md only, or PROJECT_BRIEF.md plus PROJECT_STATE.md?
+	•	Which exact Phase 0/1 batch should be executed first in repo truth: structure lock audit, portfolio shell, or first artifact ingestion?
+
+Next Action
+
+Create and save PROJECT_STATE.md in the project files using this handoff as source truth, then start the next chat with a bounded request to verify repo truth against the fixed architecture, contract, storage, and page map.
+
+Resume Prompt
+
+Read PROJECT_STATE.md and the project instructions first.
+Treat PROJECT_STATE.md as source of truth.
+Then:
+	1.	summarize current state,
+	2.	identify unverified repo truths,
+	3.	define the smallest valid next batch,
+	4.	output one executor prompt only.
+
+Validation
+	•	Verified in this chat: structural source files were loaded and contain the fixed ProofForge architecture, contract, storage, status model, roadmap, copy system, and starter artifact definitions.        
+	•	Not verified in this chat: local repo contents, live preview, routes, build, tests, or runtime behavior.
+
+Last Updated
+
+2026-04-15
