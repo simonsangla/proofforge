@@ -1,0 +1,17 @@
+{
+  "name": "Brownfield Cavekit Bootstrap — Personal Assistant",
+  "category": "Dev Tool",
+  "promise": "One-session reverse-engineering of 16 domain cavekits from a working React PWA so AI agents can evolve it through the Cavekit lifecycle without rewrites.",
+  "business_value": "Demonstrates the brownfield-adoption playbook end-to-end — full spec coverage of an existing codebase plus 8 real bugs surfaced as a side-effect of cavekit derivation.",
+  "status": "protected",
+  "protection_level": "private",
+  "link": "/lab/brownfield-cavekit-bootstrap-personal-assistant",
+  "capture": "/images/captures/brownfield-cavekit-bootstrap-personal-assistant.svg",
+  "tech_stack": [
+    "Cavekit",
+    "Brownfield Adoption",
+    "React 18 + Vite 5",
+    "Vercel"
+  ],
+  "date": "2026-04-16T00:00:00Z"
+}
